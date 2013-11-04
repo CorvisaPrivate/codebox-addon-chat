@@ -1,4 +1,4 @@
-codebox-addon-chat
-==================
+Chat (CodeBox add-on)
+========================
 
-Chat for collaborators in the workspace
+Powerful chat for your workspace (https://github.com/FriendCode/codebox).
