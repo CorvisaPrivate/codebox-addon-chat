@@ -26,14 +26,15 @@ define([
         box.list.collection.add(e.data);
     }, this);
 
-
-    // Add apps to search
+    // Add search results
     search.handler({
         'id': "chat",
         'title': "Chat with"
     }, function(query) {
+        query = query.toLowerCase();
+
         var results = _.map(collaborators.filter(function(cuser) {
-            return (cuser.get("name").search(query) >= 0
+            return (cuser.get("name").toLowerCase().search(query) >= 0
             && user.get("userId") != cuser.get("userId"));
         }), function(user) {
             return {
