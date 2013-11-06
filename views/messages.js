@@ -2,7 +2,7 @@ define([
     "collections/messages",
     "less!stylesheets/messages.less"
 ], function(Messages) {
-    var _ = require("Underscore");
+    var _ = require("underscore");
     var $ = require("jQuery");
     var hr = require("hr/hr");
     var user = require("core/user");
