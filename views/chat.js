@@ -2,8 +2,8 @@ define([
     "views/box",
     "less!stylesheets/chat.less"
 ], function(ChatBoxView) {
-    var hr = require("hr/hr");
-    var user = require("core/user");
+    var hr = codebox.require("hr/hr");
+    var user = codebox.require("core/user");
 
     var ChatView = hr.View.extend({
         className: "addon-chat",

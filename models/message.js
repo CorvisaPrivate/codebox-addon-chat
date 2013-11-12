@@ -1,6 +1,6 @@
 define([], function() {
-    var hr = require("hr/hr");
-    var collaborators = require("core/collaborators");
+    var hr = codebox.require("hr/hr");
+    var collaborators = codebox.require("core/collaborators");
 
     var Message = hr.Model.extend({
         defaults: {

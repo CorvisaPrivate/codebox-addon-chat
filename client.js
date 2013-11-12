@@ -1,11 +1,11 @@
 define([
     "views/chat"
 ], function(ChatView) {
-    var $ = require("jQuery");
-    var collaborators = require("core/collaborators");
-    var search = require("core/search");
-    var box = require("core/box");
-    var user = require("core/user");
+    var $ = codebox.require("jQuery");
+    var collaborators = codebox.require("core/collaborators");
+    var search = codebox.require("core/search");
+    var box = codebox.require("core/box");
+    var user = codebox.require("core/user");
 
     // Create chat
     var chat = new ChatView();

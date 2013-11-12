@@ -1,6 +1,6 @@
 {
     "name": "chat",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "title": "Chat",
     "description": "Chat integrated into your workspace.",
     "homepage": "https://github.com/FriendCode/codebox-addon-chat",

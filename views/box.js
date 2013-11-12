@@ -2,8 +2,8 @@ define([
     "views/messages",
     "less!stylesheets/box.less"
 ], function(MessagesList) {
-    var hr = require("hr/hr");
-    var api = require("core/api");
+    var hr = codebox.require("hr/hr");
+    var api = codebox.require("core/api");
 
     var ChatBoxView = hr.View.extend({
         className: "chat-box",

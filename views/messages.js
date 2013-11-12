@@ -2,10 +2,10 @@ define([
     "collections/messages",
     "less!stylesheets/messages.less"
 ], function(Messages) {
-    var _ = require("underscore");
-    var $ = require("jQuery");
-    var hr = require("hr/hr");
-    var user = require("core/user");
+    var _ = codebox.require("underscore");
+    var $ = codebox.require("jQuery");
+    var hr = codebox.require("hr/hr");
+    var user = codebox.require("core/user");
 
     // List Item View
     var MessageItem = hr.List.Item.extend({
