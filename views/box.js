@@ -47,10 +47,28 @@ define([
         // Toggle box
         toggle: function(st) {
             this.$el.toggleClass("mode-open", st);
+            st = this.$el.hasClass("mode-open");
+
+            if (st) {
+                this.focus();
+            } else {
+                this.blur();
+            }
+
             return this;
         },
 
-        // Clsoe box
+        // Focus the message input
+        focus: function() {
+            this.$(".box-input").focus();
+        },
+
+        // Blur the message input
+        blur: function() {
+            this.$(".box-input").blur();
+        },
+
+        // Close box
         close: function() {
             this.remove();
             this.trigger("close");
