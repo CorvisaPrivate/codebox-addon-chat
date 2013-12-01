@@ -31,7 +31,6 @@ define([
         // Open chat with person
         chatWith: function(e) {
             if (!e) return;
-            console.log($(e.currentTarget).data("chatwith"));
             var user = collaborators.getById($(e.currentTarget).data("chatwith"));
             console.log(user, user.toJSON());
             chat.open(user.get("userId"), user.get("name"));
