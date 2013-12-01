@@ -7,9 +7,6 @@ define([
 
     var ChatView = hr.View.extend({
         className: "addon-chat",
-        events: {
-            
-        },
 
         // Constructor
         initialize: function() {

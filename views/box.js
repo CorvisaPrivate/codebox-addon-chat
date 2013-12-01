@@ -10,6 +10,7 @@ define([
         templateLoader: "addon.chat.templates",
         template: "box.html",
         events: {
+            "click .box-body": "focus",
             "click .box-header": "toggle",
             "click .box-close": "close",
             "keyup .box-input": "messageInput"

@@ -1,15 +1,15 @@
 define([
-    "views/chat"
-], function(ChatView) {
+    "chat",
+    "views/panel"
+], function(chat, PanelChatView) {
     var $ = codebox.require("jQuery");
     var collaborators = codebox.require("core/collaborators");
     var search = codebox.require("core/search");
     var box = codebox.require("core/box");
     var user = codebox.require("core/user");
+    var commands = codebox.require("core/commands");
+    var panels = codebox.require("core/panels");
 
-    // Create chat
-    var chat = new ChatView();
-    chat.$el.appendTo($("body"));
 
     // Handle messages
     box.on("box:chat:message", function(e) {
@@ -54,4 +54,18 @@ define([
 
         return results;
     });
+
+    // Add search panel
+    var panel = panels.register("chat", PanelChatView);
+    
+    // Add opening command
+    var command = commands.register("chat.open", {
+        title: "Chat",
+        icon: "comments-o",
+        position: 1,
+        shortcuts: [
+            "c"
+        ]
+    });
+    panel.connectCommand(command);
 });
