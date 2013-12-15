@@ -1,7 +1,4 @@
-<ul class="cb-panel-list selected-hover">
-    <li class="chat-all">All collaborators</li>
-    <li class="header">Collaborators</li>
-    <% session.collaborators.each(function(user) { %>
-        <li data-chatwith="<%- user.id %>"><img src="<%- user.avatar() %>" /><%- user.get("name") %> </li>
-    <% }); %>
-</ul>
+<div class="chat-messages"></div>
+<div class="chat-input">
+    <textarea placeholder="Send a message"></textarea>
+</div>

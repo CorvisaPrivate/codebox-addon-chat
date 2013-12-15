@@ -16,7 +16,6 @@ ChatRPCService.prototype.send = function(args, meta) {
     }
     var message = {
         'content': args.message,
-        'to': args.to || "all",
         'from': {
             'name': meta.user.name,
             'userId': meta.user.userId
