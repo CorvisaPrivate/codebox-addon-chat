@@ -1,19 +1,20 @@
 define([
     "views/messages",
+    "text!templates/panel.html",
     "less!stylesheets/panel.less"
-], function(MessagesList) {
+], function(MessagesList, templateFile) {
     var _ = codebox.require("underscore");
     var $ = codebox.require("jQuery");
     var hr = codebox.require("hr/hr");
     var box = codebox.require("core/box");
-    var api = codebox.require("core/api");
+    var rpc = codebox.require("core/backends/rpc");
     var collaborators = codebox.require("core/collaborators");
     var PanelBaseView = codebox.require("views/panels/base");
 
     var PanelChatView = PanelBaseView.extend({
         className: "cb-panel-chat",
-        templateLoader: "addon.chat.templates",
-        template: "panel.html",
+        templateLoader: "text",
+        template: templateFile,
         events: {
             "keydown .chat-input textarea": "messageInput"
         },
@@ -65,7 +66,7 @@ define([
             if (key === 13 && val.length > 0) {
                 e.preventDefault();
                 
-                api.rpc("/chat/send", {
+                rpc.execute("chat/send", {
                     "message": val
                 }).then(function() {
                     $input.val("");

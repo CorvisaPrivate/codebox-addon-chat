@@ -1,7 +1,8 @@
 define([
     "collections/messages",
+    "text!templates/message.html",
     "less!stylesheets/messages.less"
-], function(Messages) {
+], function(Messages, templateFile) {
     var _ = codebox.require("underscore");
     var $ = codebox.require("jQuery");
     var hr = codebox.require("hr/hr");
@@ -9,8 +10,8 @@ define([
 
     // List Item View
     var MessageItem = hr.List.Item.extend({
-        templateLoader: "addon.chat.templates",
-        template: "message.html",
+        templateLoader: "text",
+        template: templateFile,
         className: "message-item",
         events: {},
 
