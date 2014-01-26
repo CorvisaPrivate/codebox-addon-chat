@@ -25,7 +25,7 @@ define([
 
             // Message list
             this.list = new MessagesList();
-            this.list.on("change:add", function() {
+            this.list.on("add", function() {
                 if (this.animation != null) {
                     this.animation.stop();
                 }
