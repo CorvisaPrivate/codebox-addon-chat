@@ -13,12 +13,16 @@ define([
     
     // Add opening command
     var command = commands.register("chat.open", {
+        category: "Chat",
         title: "Chat",
-        icon: "comment-o",
+        description: "Open Chat Panel",
+        icons: {
+            'default': "comment-o",
+        },
         position: 1,
         offline: false,
         shortcuts: [
-            "c"
+            "alt+c"
         ]
     });
     panel.connectCommand(command);
